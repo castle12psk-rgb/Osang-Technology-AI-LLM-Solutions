@@ -20,10 +20,11 @@ const HeroSection: React.FC = () => {
     <section id="home" className="relative h-screen min-h-[800px] flex items-center justify-center text-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop"
+          src="https://pimg3.daara.co.kr/kidd/photo/2023/08/11/thumbs/thumb_520390_1691749050_45.jpg"
           alt="Abstract Technology Background"
           className="w-full h-full object-cover animate-bg-pan"
         />
+        <div className="absolute inset-0 animate-aurora-bg"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/75 to-navy"></div>
       </div>
       
