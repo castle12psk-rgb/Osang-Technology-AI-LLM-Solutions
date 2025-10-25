@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Cpu, Link2, GitBranch, Database } from 'lucide-react';
 
 const flowchartItems = [
@@ -17,9 +17,45 @@ const HeroSection: React.FC = () => {
         }
     };
 
+    const backgroundContainerRef = useRef<HTMLDivElement>(null);
+    const contentContainerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const screenHeight = window.innerHeight;
+
+            if (backgroundContainerRef.current) {
+                // Parallax effect: background moves at half the speed of scroll
+                const offset = scrollY * 0.5;
+                backgroundContainerRef.current.style.transform = `translateY(${offset}px)`;
+            }
+
+            if (contentContainerRef.current) {
+                // Fade out effect for the content
+                // Be fully faded by 80% of screen height
+                const fadeStart = 0;
+                const fadeUntil = screenHeight * 0.8;
+                const opacity = Math.max(0, 1 - (scrollY - fadeStart) / (fadeUntil - fadeStart));
+                contentContainerRef.current.style.opacity = `${opacity}`;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup function to remove the event listener
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Empty dependency array means this effect runs once on mount
+
   return (
     <section id="home" className="relative h-screen min-h-[800px] flex items-center justify-center text-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      <div 
+        ref={backgroundContainerRef}
+        className="absolute inset-0 z-0"
+        style={{ willChange: 'transform' }}
+      >
         <img
           src="https://cdn.theyoungtimes.com/news/photo/202502/2651_6043_3119.jpg"
           alt="Abstract Technology Background"
@@ -28,7 +64,11 @@ const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/75 to-navy"></div>
       </div>
       
-      <div className="relative z-10 container mx-auto px-6 flex flex-col items-center">
+      <div 
+        ref={contentContainerRef}
+        className="relative z-10 container mx-auto px-6 flex flex-col items-center"
+        style={{ willChange: 'opacity' }}
+      >
         <div className="animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-400 to-ai-blue">
               AI와 LLM으로 산업을 새롭게 정의하다

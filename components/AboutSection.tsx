@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { CloudCog, Shuffle, BadgeCheck, CheckCircle2 } from 'lucide-react';
 import { aboutData } from '../constants';
 import Infographic from './Infographic';
@@ -6,8 +6,41 @@ import KnowledgeInfographic from './KnowledgeInfographic';
 import CrmInfographic from './CrmInfographic';
 
 const AboutSection: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-x-[-2rem]');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15, // Trigger when 15% of the item is visible
+      }
+    );
+
+    const timelineItems = sectionRef.current?.querySelectorAll('.timeline-item');
+    timelineItems?.forEach((item) => {
+      observer.observe(item);
+    });
+
+    return () => {
+      timelineItems?.forEach((item) => {
+        observer.unobserve(item);
+      });
+    };
+  }, []);
+
   return (
-    <section id="about" className="py-20 lg:py-32 bg-white text-gray-800">
+    <section 
+      id="about" 
+      ref={sectionRef}
+      className="relative z-20 -mt-20 rounded-t-[3rem] lg:-mt-32 lg:rounded-t-[5rem] pt-12 lg:pt-20 pb-20 lg:pb-32 bg-white text-gray-800"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-navy">About Osang Technology</h2>
@@ -27,7 +60,7 @@ const AboutSection: React.FC = () => {
                   alt={strength.title} 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-navy/40"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-navy/20"></div>
                 <div className="relative z-10 flex flex-col items-center text-center p-8 h-full justify-center">
                   <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-white/10 text-ai-blue border border-white/20 flex-shrink-0">
                     <Icon size={32} strokeWidth={2} />
@@ -46,7 +79,11 @@ const AboutSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-navy mb-10">Our Journey of Innovation</h3>
             <div className="relative border-l-2 border-ai-blue/30 ml-4">
               {aboutData.timeline.map((item, index) => (
-                <div key={index} className="mb-2 pl-12 relative last:mb-0">
+                <div 
+                  key={index} 
+                  className="timeline-item mb-2 pl-12 relative last:mb-0 opacity-0 translate-x-[-2rem] transition-all duration-700 ease-out"
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
                    <div className="absolute -left-[9px] top-2 w-4 h-4 bg-white rounded-full border-2 border-ai-blue"></div>
                    <p className="absolute -left-14 top-0 text-ai-blue font-bold text-lg">{item.year}</p>
                    <div className="space-y-3">
@@ -63,7 +100,7 @@ const AboutSection: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 lg:sticky lg:top-32">
             <Infographic />
             <KnowledgeInfographic />
             <CrmInfographic />
