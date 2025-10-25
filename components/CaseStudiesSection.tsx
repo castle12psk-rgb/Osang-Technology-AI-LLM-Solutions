@@ -1,11 +1,17 @@
-
 import React from 'react';
 import { caseStudies } from '../constants';
 
 const CaseStudiesSection: React.FC = () => {
   return (
-    <section id="references" className="pt-12 lg:pt-20 pb-20 lg:pb-32 bg-navy/70 relative">
-      <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('https://picsum.photos/seed/dataviz/1920/1080')", opacity: '0.05'}}></div>
+    <section id="references" className="pt-12 lg:pt-20 pb-20 lg:pb-32 relative">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" 
+          alt="Industry references and case studies background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 bg-navy/[.85]"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold">Industry References & Case Studies</h2>

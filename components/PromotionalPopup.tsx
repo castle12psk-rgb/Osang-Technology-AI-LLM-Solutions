@@ -5,7 +5,7 @@ const popupData = {
   crm: {
     title: "OSE-AI CRM",
     catchphrase: "데이터 기반으로 고객 유지부터 매출 성장까지!",
-    image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=2070&auto=format&fit=crop",
+    image: "https://www.unite.ai/wp-content/uploads/2024/11/CRM.webp",
     keyPoints: [
       { icon: TrendingUp, title: "매출 성장 촉진 (+30%)", description: "AI 기반 개인화 추천 및 정확한 매출 예측으로 성과를 극대화합니다." },
       { icon: UserCheck, title: "고객 이탈 방지 (-40%)", description: "이탈 위험 고객을 사전에 예측하고 선제적인 복귀 전략을 제공합니다." },
@@ -15,9 +15,9 @@ const popupData = {
     ctaLink: "#solutions"
   },
   geo: {
-    title: "GEO 디지털 홍보전략",
+    title: "GEO 최적화",
     catchphrase: "AI가 이끄는 검색방향, 차세대 디지털 홍보전략",
-    image: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop",
+    image: "https://www.journalduweb.org/wp-content/uploads/2025/08/generative-engine-optimization.png",
     keyPoints: [
       { icon: Bot, title: "AI 검색 최적화", description: "생성형 AI 시대, 검색엔진과 LLM 모두에게 최적화된 콘텐츠로 노출을 극대화합니다." },
       { icon: ShieldCheck, title: "신뢰성 있는 정보 제공", description: "구조화된 데이터(JSON-LD)로 AI에게 명확하고 신뢰도 높은 정보를 제공하여 답변 인용 확률을 높입니다." },
@@ -94,7 +94,7 @@ const PromotionalPopup: React.FC = () => {
                 onClick={() => setActiveTab('geo')} 
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors w-full ${activeTab === 'geo' ? 'bg-ai-blue text-white' : 'text-silver hover:bg-white/10'}`}
             >
-                GEO 전략
+                GEO 최적화
             </button>
         </div>
 

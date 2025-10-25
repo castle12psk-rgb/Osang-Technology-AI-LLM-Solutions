@@ -5,7 +5,7 @@ import { contactInfo } from '../constants';
 
 const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="pt-12 lg:pt-20 pb-20 lg:pb-32 bg-white text-gray-800">
+    <section id="contact" className="pt-0 pb-20 lg:pb-32 bg-white text-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-navy">Contact & Inquiry</h2>

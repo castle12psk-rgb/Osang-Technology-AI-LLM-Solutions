@@ -19,9 +19,9 @@ const FAQSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="bg-white rounded-xl p-8 lg:p-12 shadow-2xl border border-gray-100 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
           {faqData.map((faq, index) => (
-            <div key={index} className="border-b border-gray-200 last:border-b-0 animate-fade-in-up" style={{ animationDelay: `${100 + index * 100}ms` }}>
+            <div key={index} className="border-b border-gray-200 last:border-b-0">
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center text-left py-6"

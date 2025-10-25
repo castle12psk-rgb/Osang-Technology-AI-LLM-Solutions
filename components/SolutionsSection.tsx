@@ -15,14 +15,16 @@ const SolutionsSection: React.FC = () => {
   const COLORS = ['#BFBFBF', '#007AFF'];
 
   return (
-    <section id="solutions" className="pt-12 lg:pt-20 pb-20 lg:pb-32 bg-navy/70 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-500" 
+    <section id="solutions" className="pt-12 lg:pt-20 pb-20 lg:pb-32 bg-navy/70 relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop"
+          alt="Abstract AI technology background"
+          className="absolute inset-0 w-full h-full object-cover animate-bg-pan"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop')", 
             opacity: '0.25',
             mixBlendMode: 'luminosity'
-          }}></div>
+          }}
+        />
         <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mb-16">
                 <h2 className="text-3xl lg:text-4xl font-bold">AI & LLM Solutions</h2>
