@@ -10,7 +10,9 @@ const CrmInfographic: React.FC = () => {
       <div className="relative z-10 grid grid-cols-2 gap-6 h-full">
         {/* Left Side: OSE-AI CRM Flow */}
         <div className="flex flex-col text-center">
-          <h4 className="font-bold text-white text-base mb-2">성과로 이어지는 OSE-AI CRM</h4>
+          <div className="mb-2">
+            <h4 className="font-bold text-white text-base inline-block bg-black/30 backdrop-blur-sm rounded-lg py-2 px-4">성과로 이어지는 OSE-AI CRM</h4>
+          </div>
           <div className="flex-grow flex flex-col items-center justify-center space-y-2">
             <div className="flex items-center text-xs bg-white/5 py-1 px-3 rounded-full">
               <Users size={14} className="mr-2 text-ai-blue" />

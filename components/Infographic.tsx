@@ -6,11 +6,13 @@ const Infographic: React.FC = () => {
     <div className="relative rounded-xl shadow-2xl w-full h-72 overflow-hidden bg-navy border border-white/20 p-6 flex flex-col justify-between transform hover:scale-105 transition-transform duration-300">
       <div className="absolute inset-0 bg-gradient-to-br from-ai-blue/20 via-navy to-navy opacity-50"></div>
       <div className="relative z-10">
-        <div className="flex items-center space-x-2">
-           <Sparkles className="text-ai-blue" size={20}/>
-           <h3 className="font-bold text-lg text-white">AI-Powered Business Transformation</h3>
+        <div className="inline-block p-3 bg-black/30 backdrop-blur-sm rounded-lg">
+          <div className="flex items-center space-x-2">
+            <Sparkles className="text-ai-blue" size={20}/>
+            <h3 className="font-bold text-lg text-white">AI-Powered Business Transformation</h3>
+          </div>
+          <p className="text-xs text-silver mt-1">AI 기술을 통한 비즈니스 핵심 역량 강화</p>
         </div>
-        <p className="text-xs text-silver">AI 기술을 통한 비즈니스 핵심 역량 강화</p>
       </div>
 
       <div className="relative z-10 grid grid-cols-3 gap-4 text-center">

@@ -30,7 +30,7 @@
             to { transform: scale(1.15); }
         }
         .animate-bg-pan {
-            animation: keyframes-bg-pan 15s ease-in-out infinite alternate;
+            animation: keyframes-bg-pan 5s ease-in-out infinite alternate;
         }
 
         @keyframes keyframes-float {
@@ -40,22 +40,6 @@
         }
         .animate-float {
             animation: keyframes-float 3s ease-in-out infinite;
-        }
-
-        /* New Aurora Background Animation */
-        @keyframes keyframes-aurora {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .animate-aurora-bg {
-            background: linear-gradient(125deg, 
-                rgba(0, 122, 255, 0.1), 
-                rgba(0, 28, 64, 0.05) 50%, 
-                rgba(0, 122, 255, 0.1)
-            );
-            background-size: 400% 400%;
-            animation: keyframes-aurora 15s ease-in-out infinite;
         }
     </style>
     <script>

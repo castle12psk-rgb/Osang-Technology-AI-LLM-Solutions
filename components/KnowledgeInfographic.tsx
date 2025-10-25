@@ -10,9 +10,9 @@ const KnowledgeInfographic: React.FC = () => {
       <div className="relative z-10 grid grid-cols-2 gap-6 h-full">
         {/* Left Side: AI Flow */}
         <div className="flex flex-col">
-          <div className="mb-4">
+          <div className="mb-4 inline-block bg-black/30 backdrop-blur-sm rounded-lg p-3">
             <h4 className="font-bold text-white text-base">지식 기반 AI 흐름</h4>
-            <p className="text-xs text-silver">질문에서 답변까지 한번에</p>
+            <p className="text-xs text-silver mt-1">질문에서 답변까지 한번에</p>
           </div>
           <div className="space-y-3 text-xs flex-grow flex flex-col justify-center">
             <div className="flex items-center">
