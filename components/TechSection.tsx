@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { keyTechnologies } from '../constants';
 import { Layers, GitMerge, SearchCode, Server, User, DatabaseZap, Combine, Bot, MessageSquare, MoveRight, UploadCloud, BrainCircuit, ShieldCheck, Activity, Sparkles } from 'lucide-react';
@@ -32,7 +33,7 @@ const ArchCard = ({ icon, title, description, tech, highlight = false }: { icon:
 
 const TechSection: React.FC = () => {
   return (
-    <section id="technologies" className="py-20 lg:py-32 bg-white text-gray-800">
+    <section id="technologies" className="pt-12 lg:pt-20 pb-20 lg:pb-32 bg-white text-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-3xl lg:text-4xl font-bold text-navy">Key Technologies</h2>

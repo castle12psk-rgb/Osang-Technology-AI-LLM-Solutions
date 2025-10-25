@@ -30,8 +30,8 @@ export const aboutData = {
         {
             year: "2015",
             events: [
-                { text: "오상테크놀로지 설립" },
-                { text: "클라우드 기반 웹 에이전시 사업 개시" }
+                { text: "솔루션개발 전담연구팀 설립 " },
+                { text: "클라우드 기반 OSE-Commerce 1.0 플랫폼 개발" }
             ]
         },
         {
@@ -62,7 +62,7 @@ export const aboutData = {
             events: [
                 { text: "생성형 AI(Generative AI) 사업부 출범", highlight: true },
                 { text: "'OSE-GEO(Generative Engine Optimization)' 솔루션 출시" },
-                { text: "정보보호 관리체계(ISMS) 인증 획득" }
+                { text: "ISO 27001(정보보안체계), ISO 27017,27018(CLOUD정보관리체계) 인증" }
             ]
         }
     ]

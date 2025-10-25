@@ -15,8 +15,14 @@ const SolutionsSection: React.FC = () => {
   const COLORS = ['#BFBFBF', '#007AFF'];
 
   return (
-    <section id="solutions" className="py-20 lg:py-32 bg-navy/70 relative">
-        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1554494542-d62c6386aa7e?q=80&w=2070&auto=format&fit=crop')", opacity: '0.05'}}></div>
+    <section id="solutions" className="pt-12 lg:pt-20 pb-20 lg:pb-32 bg-navy/70 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-500" 
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop')", 
+            opacity: '0.25',
+            mixBlendMode: 'luminosity'
+          }}></div>
         <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mb-16">
                 <h2 className="text-3xl lg:text-4xl font-bold">AI & LLM Solutions</h2>

@@ -5,7 +5,7 @@ import { Bot, FileCode, ArrowUp, BrainCircuit, Database, MessageSquare, Sparkles
 
 const InsightSection: React.FC = () => {
   return (
-    <section id="insights" className="py-20 lg:py-32 bg-white text-gray-800">
+    <section id="insights" className="pt-12 lg:pt-20 pb-20 lg:pb-32 bg-white text-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl lg:text-4xl font-bold text-navy">데이터에서 인사이트로</h2>

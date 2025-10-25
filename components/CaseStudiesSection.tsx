@@ -4,7 +4,7 @@ import { caseStudies } from '../constants';
 
 const CaseStudiesSection: React.FC = () => {
   return (
-    <section id="references" className="py-20 lg:py-32 bg-navy/70 relative">
+    <section id="references" className="pt-12 lg:pt-20 pb-20 lg:pb-32 bg-navy/70 relative">
       <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('https://picsum.photos/seed/dataviz/1920/1080')", opacity: '0.05'}}></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">

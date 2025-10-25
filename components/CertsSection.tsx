@@ -13,9 +13,13 @@ const icons: { [key: string]: React.ReactElement } = {
 
 const CertsSection: React.FC = () => {
   return (
-    <section id="certifications" className="py-20 lg:py-32 bg-navy/70 relative overflow-hidden">
-      <div className="absolute -top-1/4 left-1/4 w-1/2 h-1/2 bg-ai-blue/10 rounded-full blur-3xl opacity-50" aria-hidden="true"></div>
-      <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-blue-500/10 rounded-full blur-3xl opacity-30" aria-hidden="true"></div>
+    <section id="certifications" className="pt-12 lg:pt-20 pb-20 lg:pb-32 relative overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center" 
+        style={{backgroundImage: "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop')"}}
+        aria-hidden="true"
+      ></div>
+      <div className="absolute inset-0 bg-navy/70 backdrop-blur-sm" aria-hidden="true"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
