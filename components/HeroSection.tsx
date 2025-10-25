@@ -3,10 +3,10 @@ import React from 'react';
 import { ArrowRight, Cpu, Link2, GitBranch, Database } from 'lucide-react';
 
 const flowchartItems = [
-    { icon: Cpu, label: 'OSE-AI CRM' },
-    { icon: Link2, label: 'OSE-O2O/D2C' },
-    { icon: Database, label: 'OSE-Medical CMS' },
-    { icon: GitBranch, label: 'OSE-RAG System' },
+    { icon: Cpu, label: 'OSE-AI CRM', description: 'AI 기반 고객관계관리' },
+    { icon: Link2, label: 'OSE-O2O/D2C', description: 'AI 커머스 스위트' },
+    { icon: Database, label: 'OSE-Medical CMS', description: 'AI 의료 콘텐츠/비서' },
+    { icon: GitBranch, label: 'OSE-RAG System', description: 'RAG 지식허브' },
 ];
 
 const HeroSection: React.FC = () => {
@@ -52,13 +52,14 @@ const HeroSection: React.FC = () => {
                 {flowchartItems.map((item, index) => (
                     <React.Fragment key={item.label}>
                         <div 
-                          className="flex flex-col items-center group text-center w-36 animate-float"
+                          className="flex flex-col items-center group text-center w-40 animate-float"
                           style={{ animationDelay: `${index * 0.3}s` }}
                         >
                             <div className="w-20 h-20 mb-3 flex items-center justify-center rounded-full bg-white/5 border-2 border-ai-blue/30 group-hover:bg-ai-blue/20 group-hover:border-ai-blue transition-all duration-300 transform group-hover:scale-110">
                                 <item.icon size={32} className="text-ai-blue" />
                             </div>
                             <span className="font-semibold text-white text-base leading-tight">{item.label}</span>
+                            <span className="text-xs text-silver mt-1">{item.description}</span>
                         </div>
                         {index < flowchartItems.length - 1 && (
                              <div className="flex-1 mt-10 mx-2 relative">
@@ -72,9 +73,10 @@ const HeroSection: React.FC = () => {
             {/* Mobile view for flowchart */}
             <div className="md:hidden flex flex-wrap justify-center gap-4">
                 {flowchartItems.map((item, index) => (
-                   <div key={index} className="bg-white/10 border border-white/20 rounded-lg p-3 flex items-center space-x-3 text-base font-semibold">
-                       <item.icon className="text-ai-blue" size={20}/>
-                       <span>{item.label}</span>
+                   <div key={index} className="bg-white/10 border border-white/20 rounded-lg p-3 w-40 text-center">
+                       <item.icon className="text-ai-blue mx-auto mb-2" size={24}/>
+                       <span className="text-base font-semibold">{item.label}</span>
+                       <p className="text-xs text-silver mt-1 font-normal">{item.description}</p>
                    </div>
                 ))}
             </div>
