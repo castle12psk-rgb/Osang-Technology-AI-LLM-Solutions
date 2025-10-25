@@ -1,8 +1,34 @@
 import React from 'react';
 import { keyTechnologies } from '../constants';
-import { Layers, GitMerge, SearchCode, Server, User, DatabaseZap, Combine, Bot, MessageSquare, MoveRight } from 'lucide-react';
+import { Layers, GitMerge, SearchCode, Server, User, DatabaseZap, Combine, Bot, MessageSquare, MoveRight, UploadCloud, BrainCircuit, ShieldCheck, Activity, Sparkles } from 'lucide-react';
 
 const icons = [<Layers key="1"/>, <GitMerge key="2"/>, <SearchCode key="3"/>, <Server key="4"/>];
+
+const ArchCard = ({ icon, title, description, tech, highlight = false }: { icon: React.ElementType, title: string, description: React.ReactNode, tech: string[], highlight?: boolean }) => {
+  const Icon = icon;
+  return (
+    <div className={`relative bg-white p-6 rounded-xl border transition-all duration-300 h-full flex flex-col ${highlight ? 'border-ai-blue/80 shadow-lg shadow-ai-blue/10' : 'border-gray-200 shadow-md hover:shadow-xl hover:-translate-y-1'}`}>
+      {highlight && <div className="absolute -inset-2 bg-ai-blue/10 rounded-xl blur-xl opacity-50 -z-10 animate-pulse" style={{ animationDuration: '4s' }}></div>}
+      <div className="flex items-start space-x-4">
+        <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center ${highlight ? 'bg-ai-blue/10 text-ai-blue' : 'bg-gray-100 text-gray-500'}`}>
+          <Icon size={24} strokeWidth={1.5} />
+        </div>
+        <div>
+          <h4 className={`text-lg font-bold ${highlight ? 'text-ai-blue' : 'text-navy'}`}>{title}</h4>
+        </div>
+      </div>
+      <p className="text-gray-600 text-sm mt-4 flex-grow leading-relaxed">{description}</p>
+      <div className="mt-4 pt-4 border-t border-gray-200/60">
+        <p className="text-xs font-semibold text-gray-400 mb-2">Key Tech Stack</p>
+        <div className="flex flex-wrap gap-2">
+          {tech.map((t, i) => (
+            <span key={i} className="text-xs text-gray-700 bg-gray-100 px-2 py-1 rounded-md">{t}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const TechSection: React.FC = () => {
   return (
@@ -90,6 +116,50 @@ const TechSection: React.FC = () => {
                     <MessageSquare className="w-7 h-7 mb-2 text-gray-500" />
                     <p className="font-semibold text-navy text-sm">Generated Answer</p>
                 </div>
+            </div>
+
+            <div className="mt-16 pt-10 border-t border-gray-200">
+              <h4 className="text-xl font-bold text-center mb-8 text-navy">Technical Architecture Stack</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <ArchCard
+                  icon={UploadCloud}
+                  title="Data Ingestion & Processing"
+                  description={<>내부 문서, DB 등 다양한 소스에서 데이터를 <span className="font-semibold bg-blue-100 text-ai-blue rounded px-1 py-0.5">자동 수집 및 정제</span>하여 AI 학습을 위한 최적의 데이터셋을 구축합니다.</>}
+                  tech={['Python', 'LangChain', 'Unstructured.io']}
+                />
+                <ArchCard
+                  icon={DatabaseZap}
+                  title="Vector & Graph Database"
+                  description={<><span className="font-semibold bg-blue-100 text-ai-blue rounded px-1 py-0.5">Vector DB(의미 검색)와 Graph DB(관계 추론)를 결합</span>한 Dual-Retrieval 전략으로 답변의 정확도를 극대화합니다.</>}
+                  tech={['Pinecone', 'Neo4j', 'FAISS']}
+                  highlight={true}
+                />
+                <ArchCard
+                  icon={Sparkles}
+                  title="LLM Orchestration"
+                  description={<>검색된 컨텍스트를 조합해 <span className="font-semibold bg-blue-100 text-ai-blue rounded px-1 py-0.5">최적의 프롬프트를 동적 생성</span>하며, Gemini·GPT 등 멀티 LLM을 지원하여 유연성을 확보합니다.</>}
+                  tech={['LangChain Agents', 'Gemini API', 'FastAPI']}
+                  highlight={true}
+                />
+                <ArchCard
+                  icon={Server}
+                  title="Application & API Layer"
+                  description={<><span className="font-semibold bg-blue-100 text-ai-blue rounded px-1 py-0.5">MSA 기반의 안정적인 API</span>를 통해 시스템과 유연하게 통합하고, 확장성 높은 사용자 인터페이스를 제공합니다.</>}
+                  tech={['React', 'Node.js', 'Docker']}
+                />
+                 <ArchCard
+                  icon={ShieldCheck}
+                  title="Security & Access Control"
+                  description={<>E2E 암호화 및 <span className="font-semibold bg-blue-100 text-ai-blue rounded px-1 py-0.5">역할 기반 접근 제어(RBAC)</span>를 적용하여, 인가된 사용자만 민감 정보에 접근하도록 보장합니다.</>}
+                  tech={['JWT', 'OAuth 2.0', 'KMS']}
+                />
+                 <ArchCard
+                  icon={Activity}
+                  title="Monitoring & Logging"
+                  description={<>AI 상호작용을 <span className="font-semibold bg-blue-100 text-ai-blue rounded px-1 py-0.5">실시간 로깅 및 모니터링</span>하여 시스템 안정성을 확보하고 지속적으로 서비스 품질을 개선합니다.</>}
+                  tech={['Prometheus', 'Grafana', 'ELK Stack']}
+                />
+              </div>
             </div>
         </div>
 
