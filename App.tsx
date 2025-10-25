@@ -10,6 +10,7 @@ import InsightSection from './components/InsightSection';
 import CertsSection from './components/CertsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import PromotionalPopup from './components/PromotionalPopup';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <ContactSection />
       </main>
       <Footer />
+      <PromotionalPopup />
     </div>
   );
 };
