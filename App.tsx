@@ -8,6 +8,7 @@ import TechSection from './components/TechSection';
 import CaseStudiesSection from './components/CaseStudiesSection';
 import InsightSection from './components/InsightSection';
 import CertsSection from './components/CertsSection';
+import FAQSection from './components/FAQSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import PromotionalPopup from './components/PromotionalPopup';
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <CaseStudiesSection />
         <InsightSection />
         <CertsSection />
+        <FAQSection />
         <ContactSection />
       </main>
       <Footer />
