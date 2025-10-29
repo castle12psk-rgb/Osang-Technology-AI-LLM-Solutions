@@ -42,7 +42,7 @@ const SolutionsSection: React.FC = () => {
                             <button
                                 key={index}
                                 onClick={() => setActiveTab(index)}
-                                className={`text-left py-6 px-4 rounded-lg transition-all duration-300 w-full min-w-[280px] lg:min-w-full group flex items-start space-x-4 ${
+                                className={`shine-effect relative overflow-hidden text-left py-6 px-4 rounded-lg transition-all duration-300 w-full min-w-[280px] lg:min-w-full group flex items-start space-x-4 ${
                                     activeTab === index
                                     ? 'bg-white/10 border border-ai-blue/50'
                                     : 'bg-transparent text-silver hover:bg-white/5'

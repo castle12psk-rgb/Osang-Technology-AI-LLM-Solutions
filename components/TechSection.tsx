@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { keyTechnologies } from '../constants';
 import { Layers, GitMerge, SearchCode, Server, User, DatabaseZap, Combine, Bot, MessageSquare, MoveRight, UploadCloud, BrainCircuit, ShieldCheck, Activity, Sparkles } from 'lucide-react';
@@ -43,7 +42,7 @@ const TechSection: React.FC = () => {
         </div>
 
         <div className="mb-16 mt-16 grid md:grid-cols-2 gap-8 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-            <div className="relative rounded-xl overflow-hidden group h-64 shadow-lg">
+            <div className="shine-effect relative rounded-xl overflow-hidden group h-64 shadow-lg">
                 <img src="https://cdn.prod.website-files.com/66d30e4e03308c30f799c1c9/677e37dff86808f1f6dba97d_3476024-0-12003600-1721826466-iStock-2149059417.webp" alt="RAG Architecture" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-navy/10"></div>
                 <div className="absolute bottom-0 left-0 p-6">
@@ -51,7 +50,7 @@ const TechSection: React.FC = () => {
                     <p className="text-sm text-silver mt-1">Vector DB와 Graph RAG를 결합한 정확한 답변 생성</p>
                 </div>
             </div>
-            <div className="relative rounded-xl overflow-hidden group h-64 shadow-lg">
+            <div className="shine-effect relative rounded-xl overflow-hidden group h-64 shadow-lg">
                 <img src="https://puredigital.nl/wp-content/uploads/2025/10/geo-marketing.jpg.webp" alt="Generative Engine Optimization" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-navy/10"></div>
                 <div className="absolute bottom-0 left-0 p-6">

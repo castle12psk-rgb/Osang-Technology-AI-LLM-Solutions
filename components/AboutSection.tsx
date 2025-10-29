@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
           {aboutData.strengths.map((strength, index) => {
             const Icon = [CloudCog, Shuffle, BadgeCheck][index];
             return (
-              <div key={index} className="relative rounded-xl overflow-hidden group hover:-translate-y-1 transition-transform duration-300 shadow-lg min-h-[250px]">
+              <div key={index} className="shine-effect relative rounded-xl overflow-hidden group hover:-translate-y-1 transition-transform duration-300 shadow-lg min-h-[250px]">
                 <img 
                   src={strength.image} 
                   alt={strength.title} 

@@ -15,7 +15,7 @@ const InsightSection: React.FC = () => {
         </div>
 
         <div className="mb-16 grid md:grid-cols-2 gap-8 animate-fade-in-up" style={{ animationDelay: '50ms' }}>
-          <div className="relative rounded-xl overflow-hidden group h-64 shadow-lg">
+          <div className="shine-effect relative rounded-xl overflow-hidden group h-64 shadow-lg">
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="AI Analytics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6">
@@ -23,7 +23,7 @@ const InsightSection: React.FC = () => {
               <p className="text-sm text-white/90 mt-1">정형/비정형 데이터에서 패턴을 발견합니다.</p>
             </div>
           </div>
-          <div className="relative rounded-xl overflow-hidden group h-64 shadow-lg">
+          <div className="shine-effect relative rounded-xl overflow-hidden group h-64 shadow-lg">
             <img src="https://specials-images.forbesimg.com/imageserve/6708ca2918b6b479c3dcd3e6/Kraft-Heinz-is-leveraging-AI-to-revolutionize-its-supply-chain--from-farm-to-fork-/960x0.jpg?fit=scale" alt="Predictive Intelligence" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6">

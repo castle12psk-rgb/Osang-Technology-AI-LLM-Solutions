@@ -38,7 +38,7 @@ const CertsSection: React.FC = () => {
                     {certifications.certs.map((cert, index) => (
                         <div 
                             key={index} 
-                            className={`animate-fade-in-up relative bg-white/5 border rounded-xl px-6 py-8 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-ai-blue/20
+                            className={`shine-effect overflow-hidden animate-fade-in-up relative bg-white/5 border rounded-xl px-6 py-8 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-ai-blue/20
                                 ${cert.highlight ? 'border-ai-blue/50' : 'border-white/10'}`
                             }
                             style={{ animationDelay: `${index * 100}ms` }}
