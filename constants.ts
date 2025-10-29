@@ -1,3 +1,4 @@
+
 export const navLinks = [
   { id: 'about', title: '회사소개' },
   { id: 'solutions', title: '솔루션' },
@@ -222,10 +223,10 @@ export const keyTechnologies = [
 
 export const caseStudies = [
     {
-        client: "서울대학교병원 외",
+        client: "서울대학교병원, 경희의료원, 이화여자대학의료원 외",
         industry: "의료",
-        solution: "AI CMS · GEO 최적화",
-        image: "https://picsum.photos/seed/hospital/600/400",
+        solution: "OSE-CMS · GEO 최적화",
+        image: "https://cdn.docdocdoc.co.kr/news/photo/202508/3030774_3033533_1454.jpg",
         effects: [
             { name: '고객 만족도', value: 25 },
             { name: '비용 절감', value: 15 },
@@ -236,31 +237,31 @@ export const caseStudies = [
         client: "현대자동차 · 기아",
         industry: "커머스",
         solution: "O2O 커머스 플랫폼",
-        image: "https://picsum.photos/seed/auto/600/400",
+        image: "https://images.unsplash.com/photo-1634804658555-248d9e9a212f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
     },
     {
         client: "펫타리움 · 트루골프",
         industry: "리테일",
         solution: "AI CRM · 리셀링 자동화",
-        image: "https://picsum.photos/seed/retail/600/400",
+        image: "https://images.unsplash.com/photo-1542744095-0d53267d353e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
     },
     {
-        client: "한국임업진흥원",
+        client: "헌법재판소, 대법원, 한국임업진흥원, 외",
         industry: "공공",
         solution: "공공 포털 시스템",
-        image: "https://picsum.photos/seed/public/600/400",
+        image: "https://postfiles.pstatic.net/MjAyMDA5MDhfMTcg/MDAxNTk5NTMwMjE4NDg5.SjgKxH9obsLpK7uJ1ZDMQIVTeho7yxP-s0X7fVTK6wYg.sTWHfSOdOMue_3xsbSQYqxbvMD-SvtUZh0IYEE-5I2cg.JPEG.mopaspr/ti324a10202.jpg?type=w773",
     },
     {
-        client: "페퍼저축은행",
+        client: "페퍼저축은행, 우리저축은행, 신한은행 외",
         industry: "금융",
         solution: "금융 포털 구축",
-        image: "https://picsum.photos/seed/finance/600/400",
+        image: "https://images.unsplash.com/photo-1645226880663-81561dcab0ae?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fCVFQSVCOCU4OCVFQyVCNXxlbnwwfHwwfHx8Mg%3D%3D&auto=format&fit=crop&q=60&w=800",
     },
     {
-        client: "가톨릭중앙의료원",
+        client: "가톨릭중앙의료원, 강릉아산병원, 창원파티마 외",
         industry: "의료",
-        solution: "AI Health Secretary",
-        image: "https://picsum.photos/seed/catholic/600/400",
+        solution: "NU/EMR 연계, Health Secretary",
+        image: "https://cdn.outsourcing.co.kr/news/photo/202509/200816_51098_3631.png",
     }
 ];
 

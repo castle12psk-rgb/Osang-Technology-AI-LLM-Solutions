@@ -23,8 +23,9 @@ const CaseStudiesSection: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study, index) => (
             <div key={index} className="bg-white/5 border border-white/10 rounded-xl overflow-hidden group">
-              <div className="overflow-hidden h-48">
+              <div className="relative overflow-hidden h-48">
                 <img src={study.image} alt={study.client} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
               </div>
               <div className="p-6">
                 <p className="text-sm text-ai-blue font-semibold">{study.industry}</p>
