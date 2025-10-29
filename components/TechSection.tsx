@@ -1,6 +1,6 @@
 import React from 'react';
 import { keyTechnologies } from '../constants';
-import { Layers, GitMerge, SearchCode, Server, User, DatabaseZap, Combine, Bot, MessageSquare, MoveRight, UploadCloud, BrainCircuit, ShieldCheck, Activity, Sparkles } from 'lucide-react';
+import { Layers, GitMerge, SearchCode, Server, User, DatabaseZap, Combine, Bot, MessageSquare, MoveRight, UploadCloud, BrainCircuit, ShieldCheck, Activity, Sparkles, ArrowDown } from 'lucide-react';
 
 const icons = [<Layers key="1"/>, <GitMerge key="2"/>, <SearchCode key="3"/>, <Server key="4"/>];
 
@@ -74,14 +74,15 @@ const TechSection: React.FC = () => {
         
         <div className="mt-20 bg-gray-50 p-8 rounded-xl border border-gray-200 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
             <h3 className="text-2xl font-bold text-center mb-10 text-navy">RAG Architecture (Vector + Graph RAG)</h3>
-            <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-6 md:gap-x-4 text-center">
+            <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-x-2 gap-y-4 md:gap-x-4 text-center">
                 {/* Node 1: User Query */}
                 <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white shadow-md border w-40 h-28 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '700ms' }}>
                     <User className="w-7 h-7 mb-2 text-gray-500" />
                     <p className="font-semibold text-navy text-sm">User Query</p>
                 </div>
 
-                <MoveRight className="w-8 h-8 text-gray-300 animate-fade-in-up" style={{ animationDelay: '800ms' }}/>
+                <ArrowDown className="w-8 h-8 text-gray-300 md:hidden animate-fade-in-up" style={{ animationDelay: '800ms' }} />
+                <MoveRight className="w-8 h-8 text-gray-300 hidden md:block animate-fade-in-up" style={{ animationDelay: '800ms' }}/>
 
                 {/* Node 2: Retrieval (Highlighted) */}
                 <div className="relative flex flex-col items-center justify-center p-4 rounded-lg bg-white shadow-lg border-2 border-ai-blue w-40 h-28 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '900ms' }}>
@@ -91,7 +92,8 @@ const TechSection: React.FC = () => {
                     <p className="text-xs text-gray-500">Retrieval</p>
                 </div>
 
-                <MoveRight className="w-8 h-8 text-gray-300 animate-fade-in-up" style={{ animationDelay: '1000ms' }}/>
+                <ArrowDown className="w-8 h-8 text-gray-300 md:hidden animate-fade-in-up" style={{ animationDelay: '1000ms' }} />
+                <MoveRight className="w-8 h-8 text-gray-300 hidden md:block animate-fade-in-up" style={{ animationDelay: '1000ms' }}/>
 
                 {/* Node 3: Context */}
                 <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white shadow-md border w-40 h-28 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '1100ms' }}>
@@ -99,7 +101,8 @@ const TechSection: React.FC = () => {
                     <p className="font-semibold text-navy text-sm">Retrieved Context</p>
                 </div>
                 
-                <MoveRight className="w-8 h-8 text-gray-300 animate-fade-in-up" style={{ animationDelay: '1200ms' }}/>
+                <ArrowDown className="w-8 h-8 text-gray-300 md:hidden animate-fade-in-up" style={{ animationDelay: '1200ms' }} />
+                <MoveRight className="w-8 h-8 text-gray-300 hidden md:block animate-fade-in-up" style={{ animationDelay: '1200ms' }}/>
                 
                 {/* Node 4: LLM (Highlighted) */}
                 <div className="relative flex flex-col items-center justify-center p-4 rounded-lg bg-white shadow-lg border-2 border-ai-blue w-40 h-28 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '1300ms' }}>
@@ -109,7 +112,8 @@ const TechSection: React.FC = () => {
                     <p className="text-xs text-gray-500">Gemini, GPT, Claude</p>
                 </div>
                 
-                <MoveRight className="w-8 h-8 text-gray-300 animate-fade-in-up" style={{ animationDelay: '1400ms' }}/>
+                <ArrowDown className="w-8 h-8 text-gray-300 md:hidden animate-fade-in-up" style={{ animationDelay: '1400ms' }} />
+                <MoveRight className="w-8 h-8 text-gray-300 hidden md:block animate-fade-in-up" style={{ animationDelay: '1400ms' }}/>
 
                 {/* Node 5: Answer */}
                 <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white shadow-md border w-40 h-28 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '1500ms' }}>

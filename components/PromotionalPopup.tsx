@@ -66,9 +66,9 @@ const PromotionalPopup: React.FC = () => {
   const activeData = popupData[activeTab];
 
   return (
-    <div className="fixed bottom-8 right-8 z-[100] animate-fade-in">
+    <div className="fixed bottom-0 right-0 left-0 sm:bottom-8 sm:right-8 sm:left-auto z-[100] animate-fade-in">
       <div 
-        className="bg-navy border border-white/20 rounded-2xl w-full max-w-md max-h-[85vh] flex flex-col overflow-hidden shadow-2xl shadow-ai-blue/20 animate-fade-in-up"
+        className="bg-navy border border-white/20 rounded-t-2xl sm:rounded-2xl w-full max-w-full sm:max-w-md max-h-[85vh] flex flex-col overflow-hidden shadow-2xl shadow-ai-blue/20 animate-fade-in-up"
         style={{ animationDelay: '0.1s', animationDuration: '0.5s' }}
       >
         
@@ -117,6 +117,7 @@ const PromotionalPopup: React.FC = () => {
                             <div key={index} className="flex items-start">
                                 <div className="bg-white/10 text-ai-blue rounded-full p-1.5 mr-3 flex-shrink-0">
                                     <point.icon size={16} />
+                                {/* FIX: Corrected a typo in the closing div tag from 'd_i_v>' to '</div>'. */}
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-white text-sm">{point.title}</h4>

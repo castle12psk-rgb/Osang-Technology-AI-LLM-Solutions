@@ -3,14 +3,14 @@ import { User, KeyRound, FileText, Search, Sparkles, MousePointerClick, Trending
 
 const KnowledgeInfographic: React.FC = () => {
   return (
-    <div className="relative rounded-xl shadow-2xl w-full h-72 overflow-hidden bg-navy border border-white/20 p-6 flex flex-col justify-between transform hover:scale-105 transition-transform duration-300 text-white">
+    <div className="relative rounded-xl shadow-2xl w-full min-h-[18rem] overflow-hidden bg-navy border border-white/20 p-6 flex flex-col justify-between transform hover:scale-105 transition-transform duration-300 text-white">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-ai-blue/10 opacity-70"></div>
       
-      <div className="relative z-10 grid grid-cols-2 gap-6 h-full">
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
         {/* Left Side: AI Flow */}
         <div className="flex flex-col">
-          <div className="mb-4 inline-block bg-black/30 backdrop-blur-sm rounded-lg p-3">
+          <div className="mb-4 inline-block bg-black/30 backdrop-blur-sm rounded-lg p-3 self-start">
             <h4 className="font-bold text-white text-base">지식 기반 AI 흐름</h4>
             <p className="text-xs text-silver mt-1">질문에서 답변까지 한번에</p>
           </div>

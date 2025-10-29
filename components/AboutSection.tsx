@@ -81,11 +81,11 @@ const AboutSection: React.FC = () => {
               {aboutData.timeline.map((item, index) => (
                 <div 
                   key={index} 
-                  className="timeline-item mb-2 pl-12 relative last:mb-0 opacity-0 translate-x-[-2rem] transition-all duration-700 ease-out"
+                  className="timeline-item mb-10 pl-8 md:pl-12 relative last:mb-0 opacity-0 translate-x-[-2rem] transition-all duration-700 ease-out"
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
                    <div className="absolute -left-[9px] top-2 w-4 h-4 bg-white rounded-full border-2 border-ai-blue"></div>
-                   <p className="absolute -left-14 top-0 text-ai-blue font-bold text-lg">{item.year}</p>
+                   <p className="md:absolute md:-left-14 md:top-0 text-ai-blue font-bold text-lg mb-2 -ml-8 md:ml-0 md:mb-0">{item.year}</p>
                    <div className="space-y-3">
                        {item.events.map((event, eventIndex) => (
                             <div key={eventIndex} className={`p-4 rounded-lg border transition-all duration-300 ${event.highlight ? 'bg-blue-50 border-ai-blue/50 shadow-sm' : 'bg-transparent border-gray-200'}`}>

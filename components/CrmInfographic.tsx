@@ -3,11 +3,11 @@ import { Users, Gift, TrendingUp, Archive, DollarSign, UserCheck, Zap, LineChart
 
 const CrmInfographic: React.FC = () => {
   return (
-    <div className="relative rounded-xl shadow-2xl w-full h-80 overflow-hidden bg-navy border border-white/20 p-6 flex flex-col justify-between transform hover:scale-105 transition-transform duration-300 text-white">
+    <div className="relative rounded-xl shadow-2xl w-full min-h-[20rem] overflow-hidden bg-navy border border-white/20 p-6 flex flex-col justify-between transform hover:scale-105 transition-transform duration-300 text-white">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-tr from-ai-blue/10 via-navy to-navy opacity-70"></div>
       
-      <div className="relative z-10 grid grid-cols-2 gap-6 h-full">
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
         {/* Left Side: OSE-AI CRM Flow */}
         <div className="flex flex-col text-center">
           <div className="mb-2">

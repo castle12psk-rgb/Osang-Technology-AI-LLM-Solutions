@@ -41,8 +41,8 @@ const CommerceInfographic: React.FC = () => {
         <p className="text-base text-silver">AI Commerce Suite 1.0</p>
       </div>
 
-      {/* Connectors */}
-      <div className="w-full relative h-10 mt-2 mb-1">
+      {/* Connectors for Desktop */}
+      <div className="w-full relative h-10 mt-2 mb-1 hidden sm:block">
         {/* Main vertical stem */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-1/2 bg-white/20"></div>
         {/* Horizontal bar */}
@@ -53,8 +53,11 @@ const CommerceInfographic: React.FC = () => {
         <div className="absolute top-1/2 right-[7.5%] w-px h-1/2 bg-white/20"></div>
       </div>
       
+      {/* Connector for Mobile */}
+      <div className="w-px h-6 bg-white/20 my-2 sm:hidden"></div>
+      
       {/* Bottom Level: Grid of 3 Cards */}
-      <div className="grid grid-cols-3 gap-x-3 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-4 sm:gap-x-3 w-full">
         <BenefitCard
           icon={ShoppingCart}
           title="OSE-O2O/D2C"
