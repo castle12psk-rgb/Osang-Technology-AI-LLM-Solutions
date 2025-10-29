@@ -249,7 +249,7 @@ export const caseStudies = [
         client: "헌법재판소, 대법원, 한국임업진흥원, 외",
         industry: "공공",
         solution: "공공 포털 시스템",
-        image: "https://postfiles.pstatic.net/MjAyMDA5MDhfMTcg/MDAxNTk5NTMwMjE4NDg5.SjgKxH9obsLpK7uJ1ZDMQIVTeho7yxP-s0X7fVTK6wYg.sTWHfSOdOMue_3xsbSQYqxbvMD-SvtUZh0IYEE-5I2cg.JPEG.mopaspr/ti324a10202.jpg?type=w773",
+        image: "https://vantiq.com/wp-content/uploads/2023/10/AdobeStock_583318183-1536x1024.jpeg",
     },
     {
         client: "페퍼저축은행, 우리저축은행, 신한은행 외",

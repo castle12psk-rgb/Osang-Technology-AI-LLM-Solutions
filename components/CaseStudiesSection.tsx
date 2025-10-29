@@ -3,15 +3,15 @@ import { caseStudies } from '../constants';
 
 const CaseStudiesSection: React.FC = () => {
   return (
-    <section id="references" className="pt-12 lg:pt-20 pb-20 lg:pb-32 relative">
+    <section id="references" className="pt-12 lg:pt-20 pb-20 lg:pb-32 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" 
           alt="Industry references and case studies background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover animate-bg-pan"
         />
       </div>
-      <div className="absolute inset-0 bg-navy/[.85]"></div>
+      <div className="absolute inset-0 bg-navy/[.85] backdrop-blur-sm"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold">Industry References & Case Studies</h2>
